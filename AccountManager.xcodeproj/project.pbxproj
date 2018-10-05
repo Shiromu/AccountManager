@@ -14,6 +14,18 @@
 		A7AC9AFB215CF17100FB57EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AC9AF9215CF17100FB57EC /* LaunchScreen.storyboard */; };
 		A7AC9B06215CF17100FB57EC /* AccountManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC9B05215CF17100FB57EC /* AccountManagerTests.swift */; };
 		A7AC9B11215CF17100FB57EC /* AccountManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC9B10215CF17100FB57EC /* AccountManagerUITests.swift */; };
+		A7AC9B1F215CF75600FB57EC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC9B1E215CF75600FB57EC /* AccountViewController.swift */; };
+		A7AC9B21215CFDA700FB57EC /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC9B20215CFDA700FB57EC /* ServiceCell.swift */; };
+		A7AC9B23215D000800FB57EC /* koya_newlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AC9B22215D000800FB57EC /* koya_newlogo.png */; };
+		A7AC9B25215D03A100FB57EC /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC9B24215D03A100FB57EC /* ServiceTableViewCell.swift */; };
+		A7BFA6122165F1D30054FB5F /* wakarimi.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BFA6112165F1D30054FB5F /* wakarimi.png */; };
+		A7BFA61421674F9D0054FB5F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BFA61321674F9D0054FB5F /* Account.swift */; };
+		A7BFA6162167630F0054FB5F /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BFA6152167630F0054FB5F /* AccountTableViewCell.swift */; };
+		A7C4880E2164CAF400FB8437 /* ServiceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C4880D2164CAF400FB8437 /* ServiceInfoViewController.swift */; };
+		A7C488102164CB1400FB8437 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C4880F2164CB1400FB8437 /* AccountInfoViewController.swift */; };
+		A7C488122164CB2C00FB8437 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C488112164CB2C00FB8437 /* AccountEditViewController.swift */; };
+		A7C488142164CB4B00FB8437 /* ServiceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C488132164CB4B00FB8437 /* ServiceEditViewController.swift */; };
+		F3B7C569D4B9AD5C7405A5FA /* Pods_AccountManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FC3F63AA22B04B433718E8 /* Pods_AccountManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		576AF5C61BFFF620100DD6C6 /* Pods-AccountManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AccountManager/Pods-AccountManager.debug.xcconfig"; sourceTree = "<group>"; };
+		82F92FFEF07A7B7247181E94 /* Pods-AccountManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-AccountManager/Pods-AccountManager.release.xcconfig"; sourceTree = "<group>"; };
+		A63E0375B3A69C473FD1796A /* Pods_AccountManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AC9AED215CF16D00FB57EC /* AccountManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AC9AF0215CF16D00FB57EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7AC9AF2215CF16D00FB57EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +62,19 @@
 		A7AC9B0C215CF17100FB57EC /* AccountManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AC9B10215CF17100FB57EC /* AccountManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerUITests.swift; sourceTree = "<group>"; };
 		A7AC9B12215CF17100FB57EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7AC9B1E215CF75600FB57EC /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		A7AC9B20215CFDA700FB57EC /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		A7AC9B22215D000800FB57EC /* koya_newlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koya_newlogo.png; sourceTree = "<group>"; };
+		A7AC9B24215D03A100FB57EC /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		A7BFA6112165F1D30054FB5F /* wakarimi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakarimi.png; sourceTree = "<group>"; };
+		A7BFA61321674F9D0054FB5F /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		A7BFA6152167630F0054FB5F /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		A7C4880D2164CAF400FB8437 /* ServiceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInfoViewController.swift; sourceTree = "<group>"; };
+		A7C4880F2164CB1400FB8437 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
+		A7C488112164CB2C00FB8437 /* AccountEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
+		A7C488132164CB4B00FB8437 /* ServiceEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEditViewController.swift; sourceTree = "<group>"; };
+		A9A5CFB09B8AC0722EB8684A /* Pods_AccountManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FC3F63AA22B04B433718E8 /* Pods_AccountManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B7C569D4B9AD5C7405A5FA /* Pods_AccountManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D14E8204C4994549FBCFD54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1FC3F63AA22B04B433718E8 /* Pods_AccountManager.framework */,
+				A9A5CFB09B8AC0722EB8684A /* Pods_AccountManagerTests.framework */,
+				A63E0375B3A69C473FD1796A /* Pods_AccountManagerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A7AC9AE4215CF16D00FB57EC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				A7AC9B04215CF17100FB57EC /* AccountManagerTests */,
 				A7AC9B0F215CF17100FB57EC /* AccountManagerUITests */,
 				A7AC9AEE215CF16D00FB57EC /* Products */,
+				EB0C7CADE29B8CA6A6D5DF7D /* Pods */,
+				0D14E8204C4994549FBCFD54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +140,21 @@
 			children = (
 				A7AC9AF0215CF16D00FB57EC /* AppDelegate.swift */,
 				A7AC9AF2215CF16D00FB57EC /* ViewController.swift */,
+				A7C4880F2164CB1400FB8437 /* AccountInfoViewController.swift */,
+				A7C488112164CB2C00FB8437 /* AccountEditViewController.swift */,
+				A7C488132164CB4B00FB8437 /* ServiceEditViewController.swift */,
+				A7C4880D2164CAF400FB8437 /* ServiceInfoViewController.swift */,
+				A7AC9B1E215CF75600FB57EC /* AccountViewController.swift */,
 				A7AC9AF4215CF16D00FB57EC /* Main.storyboard */,
 				A7AC9AF7215CF17100FB57EC /* Assets.xcassets */,
+				A7BFA6112165F1D30054FB5F /* wakarimi.png */,
 				A7AC9AF9215CF17100FB57EC /* LaunchScreen.storyboard */,
 				A7AC9AFC215CF17100FB57EC /* Info.plist */,
+				A7AC9B20215CFDA700FB57EC /* ServiceCell.swift */,
+				A7AC9B22215D000800FB57EC /* koya_newlogo.png */,
+				A7AC9B24215D03A100FB57EC /* ServiceTableViewCell.swift */,
+				A7BFA6152167630F0054FB5F /* AccountTableViewCell.swift */,
+				A7BFA61321674F9D0054FB5F /* Account.swift */,
 			);
 			path = AccountManager;
 			sourceTree = "<group>";
@@ -125,6 +177,15 @@
 			path = AccountManagerUITests;
 			sourceTree = "<group>";
 		};
+		EB0C7CADE29B8CA6A6D5DF7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				576AF5C61BFFF620100DD6C6 /* Pods-AccountManager.debug.xcconfig */,
+				82F92FFEF07A7B7247181E94 /* Pods-AccountManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7AC9B15215CF17100FB57EC /* Build configuration list for PBXNativeTarget "AccountManager" */;
 			buildPhases = (
+				BB404207BCD3F7C1193AB585 /* [CP] Check Pods Manifest.lock */,
 				A7AC9AE9215CF16D00FB57EC /* Sources */,
 				A7AC9AEA215CF16D00FB57EC /* Frameworks */,
 				A7AC9AEB215CF16D00FB57EC /* Resources */,
+				78F6759088EE3B17F5A1EF5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7AC9AFB215CF17100FB57EC /* LaunchScreen.storyboard in Resources */,
+				A7AC9B23215D000800FB57EC /* koya_newlogo.png in Resources */,
+				A7BFA6122165F1D30054FB5F /* wakarimi.png in Resources */,
 				A7AC9AF8215CF17100FB57EC /* Assets.xcassets in Resources */,
 				A7AC9AF6215CF16D00FB57EC /* Main.storyboard in Resources */,
 			);
@@ -251,13 +316,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78F6759088EE3B17F5A1EF5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AccountManager/Pods-AccountManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AccountManager/Pods-AccountManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB404207BCD3F7C1193AB585 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AccountManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A7AC9AE9215CF16D00FB57EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C4880E2164CAF400FB8437 /* ServiceInfoViewController.swift in Sources */,
 				A7AC9AF3215CF16D00FB57EC /* ViewController.swift in Sources */,
+				A7AC9B21215CFDA700FB57EC /* ServiceCell.swift in Sources */,
+				A7C488102164CB1400FB8437 /* AccountInfoViewController.swift in Sources */,
+				A7C488142164CB4B00FB8437 /* ServiceEditViewController.swift in Sources */,
+				A7BFA6162167630F0054FB5F /* AccountTableViewCell.swift in Sources */,
+				A7BFA61421674F9D0054FB5F /* Account.swift in Sources */,
+				A7C488122164CB2C00FB8437 /* AccountEditViewController.swift in Sources */,
+				A7AC9B25215D03A100FB57EC /* ServiceTableViewCell.swift in Sources */,
 				A7AC9AF1215CF16D00FB57EC /* AppDelegate.swift in Sources */,
+				A7AC9B1F215CF75600FB57EC /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +553,7 @@
 		};
 		A7AC9B16215CF17100FB57EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 576AF5C61BFFF620100DD6C6 /* Pods-AccountManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +571,7 @@
 		};
 		A7AC9B17215CF17100FB57EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F92FFEF07A7B7247181E94 /* Pods-AccountManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
