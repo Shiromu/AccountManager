@@ -9,12 +9,33 @@
 import UIKit
 
 class AccountEditViewController: UIViewController {
+    
+    var accountEditChildView: AccountAddTableViewController!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        var targetVC = childView[0]
+        
+        self.addChild(accountEditChildView)
+        self.view.addSubview(accountEditChildView.view)
+        accountEditChildView.didMove(toParent: self)
+        
+        //参考URL : http://www.rexfeng.com/blog/2018/02/how-to-use-child-view-controllers-in-swift-4-0-programmatically/
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let tableVC = segue.destination as! AccountAddTableViewController
+//        self.accountEditChildView = tableVC
+//    }
+    
+    @IBAction func saveAccountInfo(_ sender: Any) {
+        accountEditChildView.save()
+    }
+    
+
+    
     
 
     /*

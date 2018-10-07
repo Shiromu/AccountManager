@@ -21,6 +21,9 @@
 		A7BFA6122165F1D30054FB5F /* wakarimi.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BFA6112165F1D30054FB5F /* wakarimi.png */; };
 		A7BFA61421674F9D0054FB5F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BFA61321674F9D0054FB5F /* Account.swift */; };
 		A7BFA6162167630F0054FB5F /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BFA6152167630F0054FB5F /* AccountTableViewCell.swift */; };
+		A7BFA61821676B0A0054FB5F /* AccountAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BFA61721676B0A0054FB5F /* AccountAddTableViewController.swift */; };
+		A7BFA61A2168D8FC0054FB5F /* defaultIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BFA6192168D8FC0054FB5F /* defaultIcon.png */; };
+		A7BFA61C2169A1460054FB5F /* AccountInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BFA61B2169A1460054FB5F /* AccountInfoTableViewController.swift */; };
 		A7C4880E2164CAF400FB8437 /* ServiceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C4880D2164CAF400FB8437 /* ServiceInfoViewController.swift */; };
 		A7C488102164CB1400FB8437 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C4880F2164CB1400FB8437 /* AccountInfoViewController.swift */; };
 		A7C488122164CB2C00FB8437 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C488112164CB2C00FB8437 /* AccountEditViewController.swift */; };
@@ -69,6 +72,9 @@
 		A7BFA6112165F1D30054FB5F /* wakarimi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakarimi.png; sourceTree = "<group>"; };
 		A7BFA61321674F9D0054FB5F /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		A7BFA6152167630F0054FB5F /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		A7BFA61721676B0A0054FB5F /* AccountAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAddTableViewController.swift; sourceTree = "<group>"; };
+		A7BFA6192168D8FC0054FB5F /* defaultIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultIcon.png; sourceTree = "<group>"; };
+		A7BFA61B2169A1460054FB5F /* AccountInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoTableViewController.swift; sourceTree = "<group>"; };
 		A7C4880D2164CAF400FB8437 /* ServiceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInfoViewController.swift; sourceTree = "<group>"; };
 		A7C4880F2164CB1400FB8437 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
 		A7C488112164CB2C00FB8437 /* AccountEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
@@ -140,21 +146,24 @@
 			children = (
 				A7AC9AF0215CF16D00FB57EC /* AppDelegate.swift */,
 				A7AC9AF2215CF16D00FB57EC /* ViewController.swift */,
+				A7AC9B1E215CF75600FB57EC /* AccountViewController.swift */,
 				A7C4880F2164CB1400FB8437 /* AccountInfoViewController.swift */,
 				A7C488112164CB2C00FB8437 /* AccountEditViewController.swift */,
 				A7C488132164CB4B00FB8437 /* ServiceEditViewController.swift */,
 				A7C4880D2164CAF400FB8437 /* ServiceInfoViewController.swift */,
-				A7AC9B1E215CF75600FB57EC /* AccountViewController.swift */,
 				A7AC9AF4215CF16D00FB57EC /* Main.storyboard */,
 				A7AC9AF7215CF17100FB57EC /* Assets.xcassets */,
 				A7BFA6112165F1D30054FB5F /* wakarimi.png */,
+				A7BFA6192168D8FC0054FB5F /* defaultIcon.png */,
 				A7AC9AF9215CF17100FB57EC /* LaunchScreen.storyboard */,
 				A7AC9AFC215CF17100FB57EC /* Info.plist */,
 				A7AC9B20215CFDA700FB57EC /* ServiceCell.swift */,
 				A7AC9B22215D000800FB57EC /* koya_newlogo.png */,
+				A7BFA61721676B0A0054FB5F /* AccountAddTableViewController.swift */,
 				A7AC9B24215D03A100FB57EC /* ServiceTableViewCell.swift */,
 				A7BFA6152167630F0054FB5F /* AccountTableViewCell.swift */,
 				A7BFA61321674F9D0054FB5F /* Account.swift */,
+				A7BFA61B2169A1460054FB5F /* AccountInfoTableViewController.swift */,
 			);
 			path = AccountManager;
 			sourceTree = "<group>";
@@ -294,6 +303,7 @@
 			files = (
 				A7AC9AFB215CF17100FB57EC /* LaunchScreen.storyboard in Resources */,
 				A7AC9B23215D000800FB57EC /* koya_newlogo.png in Resources */,
+				A7BFA61A2168D8FC0054FB5F /* defaultIcon.png in Resources */,
 				A7BFA6122165F1D30054FB5F /* wakarimi.png in Resources */,
 				A7AC9AF8215CF17100FB57EC /* Assets.xcassets in Resources */,
 				A7AC9AF6215CF16D00FB57EC /* Main.storyboard in Resources */,
@@ -377,9 +387,11 @@
 				A7C488142164CB4B00FB8437 /* ServiceEditViewController.swift in Sources */,
 				A7BFA6162167630F0054FB5F /* AccountTableViewCell.swift in Sources */,
 				A7BFA61421674F9D0054FB5F /* Account.swift in Sources */,
+				A7BFA61821676B0A0054FB5F /* AccountAddTableViewController.swift in Sources */,
 				A7C488122164CB2C00FB8437 /* AccountEditViewController.swift in Sources */,
 				A7AC9B25215D03A100FB57EC /* ServiceTableViewCell.swift in Sources */,
 				A7AC9AF1215CF16D00FB57EC /* AppDelegate.swift in Sources */,
+				A7BFA61C2169A1460054FB5F /* AccountInfoTableViewController.swift in Sources */,
 				A7AC9B1F215CF75600FB57EC /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

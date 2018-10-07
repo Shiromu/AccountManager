@@ -246,18 +246,18 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="UBD-IO-CIJ" id="5fV-WM-1aj"/>
-                        <segue destination="dSI-fY-wtC" kind="show" id="fOr-q7-Nmd"/>
+                        <segue destination="dSI-fY-wtC" kind="show" identifier="toAccountInfo" id="fOr-q7-Nmd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNZ-Zq-nKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1860" y="-25.637181409295355"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Account Info Table View Controller-->
         <scene sceneID="Vw1-XM-Bdc">
             <objects>
-                <tableViewController id="cfp-1B-b7B" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qAD-4A-Byk">
+                <tableViewController id="cfp-1B-b7B" customClass="AccountInfoTableViewController" customModule="AccountManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qAD-4A-Byk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="293"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -376,6 +376,13 @@
                             <outlet property="delegate" destination="cfp-1B-b7B" id="WEX-mD-ZFv"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="idLabel" destination="FnF-QX-EEf" id="vod-oh-rze"/>
+                        <outlet property="linkLabel" destination="0JD-f6-D5y" id="YU7-zH-zDE"/>
+                        <outlet property="mailLabel" destination="2ru-W2-7ix" id="yhF-Hv-Ljq"/>
+                        <outlet property="passLabel" destination="3FO-o8-jIT" id="7U5-vz-rm2"/>
+                        <outlet property="table" destination="qAD-4A-Byk" id="f3U-YQ-Bwo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5d-mE-Bm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -412,7 +419,7 @@
                                 <rect key="frame" x="0.0" y="325" width="375" height="293"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="cfp-1B-b7B" kind="embed" id="MpF-Bq-Z09"/>
+                                    <segue destination="cfp-1B-b7B" kind="embed" identifier="accountInfoSegue" id="MpF-Bq-Z09"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -429,6 +436,11 @@
                             <barButtonItem title="Share" id="w2U-f1-EwT"/>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="accountImageView" destination="WcU-RP-Bqd" id="H6n-Km-yEk"/>
+                        <outlet property="serviceLabel" destination="f4k-Wp-IYl" id="ORx-3z-1kV"/>
+                        <outlet property="userNameLabel" destination="5rF-sV-4N5" id="ss4-Ts-GpS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASR-ug-CAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -437,7 +449,6 @@
         <!--Account Edit View Controller-->
         <scene sceneID="H1o-bY-6Qw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FdK-FD-3xn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ADO-CS-XTb" customClass="AccountEditViewController" customModule="AccountManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wku-BI-wKy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -455,16 +466,21 @@
                         <viewLayoutGuide key="safeArea" id="Hmb-hI-7yv"/>
                     </view>
                     <navigationItem key="navigationItem" id="eID-dV-f7I">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="cOB-oR-d5d"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="cOB-oR-d5d">
+                            <connections>
+                                <action selector="saveAccountInfo:" destination="ADO-CS-XTb" id="yOd-ua-e3U"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdK-FD-3xn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3524" y="-26.53673163418291"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Account Add Table View Controller-->
         <scene sceneID="U5g-Mz-dRp">
             <objects>
-                <tableViewController id="kk0-2g-DAs" sceneMemberID="viewController">
+                <tableViewController id="kk0-2g-DAs" customClass="AccountAddTableViewController" customModule="AccountManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DCM-9P-eQj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -491,6 +507,13 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-7x-ih0">
+                                                    <rect key="frame" x="16" y="24" width="127" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="selectIconImage" destination="kk0-2g-DAs" eventType="touchUpInside" id="ugU-5R-Z28"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -566,7 +589,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-Xk-z8M">
-                                                    <rect key="frame" x="140" y="6" width="221" height="30"/>
+                                                    <rect key="frame" x="138" y="7" width="221" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -640,10 +663,18 @@
                             <outlet property="delegate" destination="kk0-2g-DAs" id="joX-u7-Syt"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="accountImage" destination="41Y-SB-HKd" id="iH3-su-Nfm"/>
+                        <outlet property="accountNameTextField" destination="s5h-Ax-el8" id="i2u-71-nc8"/>
+                        <outlet property="idTextField" destination="sg1-JD-h22" id="mrm-yg-5r6"/>
+                        <outlet property="linkTextField" destination="S5H-kX-aks" id="emd-h1-ZQv"/>
+                        <outlet property="mailTextField" destination="cy9-Xk-z8M" id="PAh-6W-Fs8"/>
+                        <outlet property="passTextField" destination="zoa-1p-Gb5" id="BtG-Yp-irj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVs-1S-e2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4305" y="-27"/>
+            <point key="canvasLocation" x="4304.8000000000002" y="-27.886056971514247"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nh2-9E-iLe">
@@ -703,7 +734,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="py6-GC-mgO"/>
+        <segue reference="bce-FR-wwz"/>
         <segue reference="fOr-q7-Nmd"/>
         <segue reference="Uty-fI-VIk"/>
     </inferredMetricsTieBreakers>

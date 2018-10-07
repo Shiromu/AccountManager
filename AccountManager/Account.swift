@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class Account: Object{
+    @objc dynamic var accountImage: UIImage? = nil
     @objc dynamic var accountName = ""
     @objc dynamic var accountID = ""
     @objc dynamic var accountPass = ""

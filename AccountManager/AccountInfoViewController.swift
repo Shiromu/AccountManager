@@ -7,15 +7,63 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AccountInfoViewController: UIViewController {
 
+    var accountItem: Results<Account>!
+    @IBOutlet weak var accountImageView: UIImageView!
+    @IBOutlet weak var serviceLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    
+    var infoIndex: IndexPath!
+    
+    var service = ""
+    var name = ""
+    var image: UIImage!
+//    let accountInfoTVC: AccountInfoTableViewController = AccountInfoTableViewController()
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        addChild(accountInfoTVC)
+        
+        do{
+            let realm = try Realm()
+            accountItem = realm.objects(Account.self)
+        } catch {
+            
+        }
+        
 
         // Do any additional setup after loading the view.
     }
     
+    func setInfo(){
+        let object = accountItem[infoIndex.row]
+        name = object.accountName
+        service = object.accountService
+        image = object.accountImage
+        serviceLabel.text = service
+        userNameLabel.text = name
+        accountImageView.image = image
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "accountInfoSegue"{
+            let acInfoTableVC = segue.destination as! AccountInfoTableViewController
+            acInfoTableVC.infoIndex = infoIndex
+        }
+    }
+    
+//    func childview(){
+//        let childViewController = self.children
+//
+//
+//    }
 
     /*
     // MARK: - Navigation
