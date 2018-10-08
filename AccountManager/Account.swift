@@ -10,12 +10,14 @@ import Foundation
 import RealmSwift
 
 class Account: Object{
-    @objc dynamic var accountImage: UIImage? = nil
+    @objc dynamic var accountImage: Data?
     @objc dynamic var accountName = ""
     @objc dynamic var accountID = ""
     @objc dynamic var accountPass = ""
     @objc dynamic var accountLink = ""
     @objc dynamic var accountService = ""
+    @objc dynamic var accountMail = ""
+    
 }
 
 class DataWrapper: Object {

@@ -10,6 +10,10 @@ import UIKit
 
 class AccountEditViewController: UIViewController {
     
+    var newAccount = true
+    var infoIndex: IndexPath!
+    
+    
     var accountEditChildView: AccountAddTableViewController!
  
     
@@ -26,14 +30,17 @@ class AccountEditViewController: UIViewController {
         //参考URL : http://www.rexfeng.com/blog/2018/02/how-to-use-child-view-controllers-in-swift-4-0-programmatically/
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let tableVC = segue.destination as! AccountAddTableViewController
-//        self.accountEditChildView = tableVC
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tableVC = segue.destination as! AccountAddTableViewController
+        tableVC.newAccount = newAccount
+        tableVC.infoIndex = infoIndex
+    }
     
     @IBAction func saveAccountInfo(_ sender: Any) {
         let targetVC = children[0] as! AccountAddTableViewController
         targetVC.save()
+        //セーブしたら前の画面に戻る動作
+        self.navigationController?.popViewController(animated: true)
     }
     
 

@@ -396,6 +396,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CC2-H4-eh0">
+                                <rect key="frame" x="0.0" y="325" width="375" height="293"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.90257926389999998" blue="0.59679894909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="cfp-1B-b7B" kind="embed" identifier="accountInfoSegue" id="8TZ-X8-ZGH"/>
+                                </connections>
+                            </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcU-RP-Bqd">
                                 <rect key="frame" x="123" y="111" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -415,13 +423,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CC2-H4-eh0">
-                                <rect key="frame" x="0.0" y="325" width="375" height="293"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="cfp-1B-b7B" kind="embed" identifier="accountInfoSegue" id="MpF-Bq-Z09"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tXC-FT-Uib"/>
@@ -430,7 +431,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="edit" id="91o-vq-dFc">
                                 <connections>
-                                    <segue destination="ADO-CS-XTb" kind="show" id="bce-FR-wwz"/>
+                                    <segue destination="ADO-CS-XTb" kind="show" identifier="toEditSegue" id="bce-FR-wwz"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Share" id="w2U-f1-EwT"/>
@@ -439,6 +440,7 @@
                     <connections>
                         <outlet property="accountImageView" destination="WcU-RP-Bqd" id="H6n-Km-yEk"/>
                         <outlet property="serviceLabel" destination="f4k-Wp-IYl" id="ORx-3z-1kV"/>
+                        <outlet property="tableView" destination="CC2-H4-eh0" id="uwW-4A-EBU"/>
                         <outlet property="userNameLabel" destination="5rF-sV-4N5" id="ss4-Ts-GpS"/>
                     </connections>
                 </viewController>
@@ -564,7 +566,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-JD-h22">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="@example" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-JD-h22">
                                                     <rect key="frame" x="140" y="7" width="221" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -588,7 +590,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-Xk-z8M">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@aaa.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-Xk-z8M">
                                                     <rect key="frame" x="138" y="7" width="221" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -636,7 +638,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5H-kX-aks">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="http://example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5H-kX-aks">
                                                     <rect key="frame" x="140" y="6" width="221" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -734,7 +736,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="py6-GC-mgO"/>
+        <segue reference="bce-FR-wwz"/>
         <segue reference="fOr-q7-Nmd"/>
         <segue reference="Uty-fI-VIk"/>
     </inferredMetricsTieBreakers>

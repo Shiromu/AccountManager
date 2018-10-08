@@ -15,6 +15,7 @@ class AccountInfoViewController: UIViewController {
     @IBOutlet weak var accountImageView: UIImageView!
     @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var tableView: UIView!
     
     
     var infoIndex: IndexPath!
@@ -31,7 +32,7 @@ class AccountInfoViewController: UIViewController {
         
 //        addChild(accountInfoTVC)
 
-        
+//        let targetVC = children[0] as! AccountInfoTableViewController
         do{
             let realm = try Realm()
             accountItem = realm.objects(Account.self)
@@ -53,7 +54,7 @@ class AccountInfoViewController: UIViewController {
         let object = accountItem[infoIndex.row]
         name = object.accountName
         service = object.accountService
-        image = object.accountImage
+        image = UIImage(data: object.accountImage!)
         serviceLabel.text = service
         userNameLabel.text = name
         accountImageView.image = image
@@ -63,6 +64,11 @@ class AccountInfoViewController: UIViewController {
         if segue.identifier == "accountInfoSegue"{
             let acInfoTableVC = segue.destination as! AccountInfoTableViewController
             acInfoTableVC.infoIndex = infoIndex
+        }
+        if segue.identifier == "toEditSegue"{
+            let acEditVC = segue.destination as! AccountEditViewController
+            acEditVC.newAccount = false
+            acEditVC.infoIndex = infoIndex
         }
     }
     

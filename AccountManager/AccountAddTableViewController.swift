@@ -11,6 +11,10 @@ import RealmSwift
 
 class AccountAddTableViewController: UITableViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var newAccount: Bool = true
+    var infoIndex: IndexPath!
+    var accountItem: Results<Account>!
+    
     @IBOutlet weak var accountImage: UIImageView!
     @IBOutlet weak var accountNameTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
@@ -28,8 +32,30 @@ class AccountAddTableViewController: UITableViewController, UITextViewDelegate, 
         mailTextField.delegate = self as? UITextFieldDelegate
         passTextField.delegate = self as? UITextFieldDelegate
         linkTextField.delegate = self as? UITextFieldDelegate
-        selectImage = UIImage(named: "defaultIcon.png")
-        accountImage.image = selectImage
+
+        
+        //新規じゃない場合の処理を先に書く
+        if !newAccount{
+            do{
+                let realm = try Realm()
+                accountItem = realm.objects(Account.self)
+                let object = accountItem[infoIndex.row]
+                accountNameTextField.text = object.accountName
+                idTextField.text = object.accountID
+                mailTextField.text = object.accountMail
+                passTextField.text = object.accountPass
+                linkTextField.text = object.accountLink
+                accountImage.image = UIImage(data: object.accountImage!)
+                selectImage = accountImage.image
+                
+            } catch {
+                
+            }
+        } else {
+            //初期画像の設定 いらないワンクッションな気もする
+            selectImage = UIImage(named: "defaultIcon.png")
+            accountImage.image = selectImage
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -77,18 +103,33 @@ class AccountAddTableViewController: UITableViewController, UITextViewDelegate, 
     public func save(){
         do{
             let realm = try Realm()
-            let newAccount = Account()
+            let newAccounts = Account()
             //代入をしていく
-            newAccount.accountName = accountNameTextField.text!
-            newAccount.accountID = idTextField.text!
-            newAccount.accountPass = passTextField.text!
-            newAccount.accountLink = linkTextField.text!
-            newAccount.accountImage = selectImage
-            
-            try! realm.write {
-                realm.add(newAccount)
-                print("AddSuccess!")
+            if !newAccount {
+                try! realm.write {
+                    let object = accountItem[infoIndex.row]
+                    object.accountName = accountNameTextField.text!
+                    object.accountID = idTextField.text!
+                    object.accountPass = passTextField.text!
+                    object.accountLink = linkTextField.text!
+                    object.accountMail = mailTextField.text!
+                    object.accountImage = selectImage.jpegData(compressionQuality: 0.2)
+                }
+            } else {
+                newAccounts.accountName = accountNameTextField.text!
+                newAccounts.accountID = idTextField.text!
+                newAccounts.accountPass = passTextField.text!
+                newAccounts.accountLink = linkTextField.text!
+                newAccounts.accountMail = mailTextField.text!
+                // jpegのDataに置き換えて保存
+                newAccounts.accountImage = selectImage.jpegData(compressionQuality: 0.2)
+                try! realm.write {
+                    realm.add(newAccounts)
+                    print("AddSuccess!")
+                }
             }
+            
+
         }catch {
             print("AddFailed……")
         }

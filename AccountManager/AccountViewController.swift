@@ -31,7 +31,7 @@ class AccountViewController: UIViewController , UITableViewDataSource, UITableVi
             accountItem = realm.objects(Account.self)
             table.reloadData()
         } catch {
-            
+            print("failed")
         }
         // Do any additional setup after loading the view.
     }
@@ -71,8 +71,9 @@ class AccountViewController: UIViewController , UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "accountCell") as! AccountTableViewCell
         
         let object = accountItem[indexPath.row]
+        let image = UIImage(data: object.accountImage!)!
         
-        cell.accountImageView.image = object.accountImage
+        cell.accountImageView.image = image
         cell.accountNameLabel.text = object.accountName
         
         return cell
@@ -86,8 +87,9 @@ class AccountViewController: UIViewController , UITableViewDataSource, UITableVi
     //参考 : https://qiita.com/Simmon/items/7f93e82b0a043008e227
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            //先にrealmの該当データを消してからリロードさせると上手くいく アニメーションはなくなるけど。
+            deleteAccount(at: indexPath.row)
+            reload()
         }
     }
     
