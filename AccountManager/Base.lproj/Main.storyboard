@@ -227,8 +227,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="accountImageView" destination="U6H-uO-ixg" id="7AS-eE-6JG"/>
-                                            <outlet property="accountNameLabel" destination="Jv7-Rr-uL1" id="LV7-db-gaT"/>
+                                            <outlet property="accountImageView" destination="U6H-uO-ixg" id="LlW-Y7-0TY"/>
+                                            <outlet property="accountNameLabel" destination="Jv7-Rr-uL1" id="1GE-2H-vPv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -240,12 +240,12 @@
                     <navigationItem key="navigationItem" title="アカウント" id="q0I-hg-UT7">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Qj6-ES-FL8">
                             <connections>
-                                <segue destination="ADO-CS-XTb" kind="show" id="py6-GC-mgO"/>
+                                <segue destination="ADO-CS-XTb" kind="show" identifier="toAccountEdit" id="py6-GC-mgO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="table" destination="UBD-IO-CIJ" id="5fV-WM-1aj"/>
+                        <outlet property="table" destination="UBD-IO-CIJ" id="Ryx-2h-Noa"/>
                         <segue destination="dSI-fY-wtC" kind="show" identifier="toAccountInfo" id="fOr-q7-Nmd"/>
                     </connections>
                 </viewController>
@@ -734,7 +734,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bce-FR-wwz"/>
+        <segue reference="py6-GC-mgO"/>
         <segue reference="fOr-q7-Nmd"/>
         <segue reference="Uty-fI-VIk"/>
     </inferredMetricsTieBreakers>

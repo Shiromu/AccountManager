@@ -30,6 +30,7 @@ class AccountInfoViewController: UIViewController {
         super.viewDidLoad()
         
 //        addChild(accountInfoTVC)
+
         
         do{
             let realm = try Realm()
@@ -42,6 +43,12 @@ class AccountInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setInfo()
+    }
+    
+    //画面の表示を設定。
     func setInfo(){
         let object = accountItem[infoIndex.row]
         name = object.accountName

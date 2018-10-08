@@ -11,16 +11,17 @@ import UIKit
 class AccountEditViewController: UIViewController {
     
     var accountEditChildView: AccountAddTableViewController!
-    
+ 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 //        var targetVC = childView[0]
+
         
-        self.addChild(accountEditChildView)
-        self.view.addSubview(accountEditChildView.view)
-        accountEditChildView.didMove(toParent: self)
+//        self.addChild(accountEditChildView)
+//        self.view.addSubview(accountEditChildView.view)
+//        accountEditChildView.didMove(toParent: self)
         
         //参考URL : http://www.rexfeng.com/blog/2018/02/how-to-use-child-view-controllers-in-swift-4-0-programmatically/
     }
@@ -31,7 +32,8 @@ class AccountEditViewController: UIViewController {
 //    }
     
     @IBAction func saveAccountInfo(_ sender: Any) {
-        accountEditChildView.save()
+        let targetVC = children[0] as! AccountAddTableViewController
+        targetVC.save()
     }
     
 

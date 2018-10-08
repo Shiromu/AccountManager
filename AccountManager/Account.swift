@@ -17,3 +17,7 @@ class Account: Object{
     @objc dynamic var accountLink = ""
     @objc dynamic var accountService = ""
 }
+
+class DataWrapper: Object {
+    let list = List<Data>()
+}

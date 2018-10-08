@@ -22,6 +22,7 @@ class AccountAddTableViewController: UITableViewController, UITextViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //デリゲートの場所宣言
         accountNameTextField.delegate = self as? UITextFieldDelegate
         idTextField.delegate = self as? UITextFieldDelegate
         mailTextField.delegate = self as? UITextFieldDelegate
